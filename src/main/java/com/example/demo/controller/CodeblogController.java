@@ -25,4 +25,13 @@ public class CodeblogController {
         return mv;
     }
 
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public ModelAndView getIndex(){
+        ModelAndView mv  = new ModelAndView("index");
+        List<Post> index = codeblogService.findAll();
+        mv.addObject("index", index);
+
+        return mv;
+    }
+
 }
