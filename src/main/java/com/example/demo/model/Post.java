@@ -3,6 +3,8 @@ package com.example.demo.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
 
@@ -30,7 +32,6 @@ public class Post {
     private LocalDate data;
 
     @NotBlank
-    @Lob
     private String texto;
 
     // getters
@@ -63,7 +64,7 @@ public class Post {
         this.id = id;
     }
 
-    public void setImg(String img){
+    public void setImg(String img) {
         this.img = img;
     }
 
