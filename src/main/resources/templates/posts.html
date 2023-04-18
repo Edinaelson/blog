@@ -32,18 +32,28 @@
                </ol>
            </nav>
 
-           <div class="card shadow-sm bg-white rounded" style="margin-top: 20px" th:each="post : ${posts}">
-               <div class="card-body">
-                  <p class="card-subtitle mb-2 text-muted h2" style="font-size: 0.8rem;">
-                    <span class="badge badge-secondary" th:text="${post.autor}"></span>
-                    <span th:text="${post.data}"></span>
-                  </p>
-                   <a href="#"><h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px">
-                       <span th:text="${post.titulo}"></span>
-                   </h4></a>
-                   <p class="card-text">
-                       <span th:utext="${#strings.abbreviate(post.texto, 400)}"></span>
-                   </p>
+           <div class="card shadow-sm bg-white rounded" style="margin-top: 20px; max-width: 540px; margin: 0 auto;" th:each="post : ${posts}">
+               <div>
+                   <div class="row g-0">
+                       <div class="col-md-4">
+                           <img src="https://i.pinimg.com/564x/cb/c7/6a/cbc76a054c9599cc13d5d69910029a15.jpg" class="img-fluid rounded-start">
+                           <!--<img th:src="@{'data:image/png;base64,' + #strings.encodeBase64(post.img)}" class="img-fluid rounded-start">-->
+                       </div>
+                       <div class="col-md-8">
+                       <div class="card-body">
+                           <p class="card-subtitle mb-2 text-muted h2" style="font-size: 0.8rem;">
+                               <span class="badge badge-secondary" th:text="${post.autor}"></span>
+                               <span th:text="${post.data}"></span>
+                           </p>
+                           <a href="#"><h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px">
+                               <span th:text="${post.titulo}"></span>
+                           </h4></a>
+                           <p class="card-text">
+                               <span th:utext="${#strings.abbreviate(post.texto, 400)}"></span>
+                           </p>
+                       </div>
+                       </div>
+                   </div>
                </div>
            </div>
        </div>

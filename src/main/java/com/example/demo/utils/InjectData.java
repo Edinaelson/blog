@@ -2,6 +2,7 @@ package com.example.demo.utils;
 
 import com.example.demo.model.Post;
 import com.example.demo.repository.CodeblogRepository;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.time.LocalDate;
@@ -23,15 +24,15 @@ public class InjectData {
        //post1.setId(1L);
         post1.setAutor("Edinaelson Santos");
         post1.setData(LocalDate.now());
-        post1.setTitulo("Linux");
-        post1.setTexto("Linux e um termo popularmente empregado para se referir a sistemas operativos ou sistemas operacionais que utilizam o nucleo Linux");
+        post1.setTitulo("Java");
+        post1.setTexto("Java e uma linguagem de programacao orientada a objetos desenvolvida na decada de 90 por uma equipe de programadores chefiada por James Gosling, na empresa Sun Microsystems, que em 2008 foi adquirido pela empresa Oracle Corporation");
 
         Post post2 = new Post();
         //post2.setId(2L);
         post2.setAutor("Lucas Modric");
         post2.setData(LocalDate.now());
-        post2.setTitulo("Windows");
-        post2.setTexto("Windows e u sistema operacional fundado por bill gates um rapaz inteligente e atencioso e revolucionario, mudou para sempre o mercado atual.");
+        post2.setTitulo("PHP");
+        post2.setTexto("PHP e uma linguagem interpretada livre, usada originalmente apenas para o desenvolvimento de aplicacoes presentes e atuantes no lado do servidor, capazes de gerar conteudo dinamico na World Wide Web.");
 
         postList.add(post1);
         postList.add(post2);

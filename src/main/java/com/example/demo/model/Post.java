@@ -18,6 +18,9 @@ public class Post {
     private Long id;
 
     @NotBlank
+    private String img;
+
+    @NotBlank
     private String titulo;
 
     @NotBlank
@@ -33,6 +36,10 @@ public class Post {
     // getters
     public Long getId() {
         return id;
+    }
+
+    public String getImg() {
+        return img;
     }
 
     public String getTitulo() {
@@ -54,6 +61,10 @@ public class Post {
     // setters
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setImg(String img){
+        this.img = img;
     }
 
     public void setTitulo(String titulo) {
